@@ -582,26 +582,30 @@ body::before {
 }
 
 /* Responsive - Tablet */
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .hero-title {
-    font-size: 52px;
+    font-size: 42px;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
   }
   
   .features-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-  }
-  
-  .hero-section {
-    padding: 80px 48px 60px;
-  }
-  
-  .features-section {
-    padding: 0 48px 64px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding: 0 32px;
   }
   
   .header {
-    padding: 24px 48px;
+    padding: 20px 32px;
+  }
+  
+  .hero-section {
+    padding: 80px 32px 80px;
+  }
+  
+  .features-section {
+    padding: 0 32px 64px;
   }
 }
 
@@ -609,7 +613,7 @@ body::before {
 @media (max-width: 768px) {
   .screen {
     margin-left: 0;
-    padding-bottom: 90px;
+    padding-bottom: 100px;
   }
   
   .bottom-nav {
@@ -622,11 +626,13 @@ body::before {
     height: auto;
     flex-direction: row;
     justify-content: space-around;
-    padding: 16px 0 24px;
+    padding: 12px 0 24px;
     border-right: none;
     border-top: 1px solid var(--cream-dark);
     border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
     box-shadow: 0 -4px 24px var(--shadow-sm);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
   }
   
   .nav-logo {
@@ -635,60 +641,204 @@ body::before {
   
   .nav-item {
     width: auto;
+    padding: 8px 12px;
   }
   
   .nav-item::before {
     display: none;
   }
   
-  .hero-title {
-    font-size: 40px;
-  }
-  
-  .hero-subtitle {
-    font-size: 16px;
-  }
-  
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 0 24px;
-    margin-top: -40px;
-  }
-  
-  .feature-card {
-    padding: 28px 24px;
-  }
-  
-  .feature-icon {
-    width: 56px;
-    height: 56px;
-    font-size: 28px;
-  }
-  
-  .header {
-    padding: 20px 24px;
-  }
-  
-  .header-title {
+  .nav-icon {
     font-size: 24px;
   }
   
+  .nav-label {
+    font-size: 10px;
+  }
+  
+  /* Hero Section Mobile */
   .hero-section {
-    padding: 60px 24px 50px;
+    padding: 50px 24px 60px;
   }
   
+  .hero-content {
+    max-width: 100%;
+  }
+  
+  .welcome-text {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-title {
+    font-size: 34px;
+    margin-bottom: 14px;
+  }
+  
+  .hero-subtitle {
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+  
+  .search-bar {
+    padding: 14px 18px;
+    max-width: 100%;
+  }
+  
+  .search-bar input {
+    font-size: 14px;
+  }
+  
+  /* Features Section Mobile - 2 columns */
   .features-section {
-    padding: 0 0 40px;
+    padding: 24px 16px 60px;
+    margin-top: 0;
   }
   
+  .features-section::before {
+    opacity: 0.08;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 0;
+  }
+  
+  .features-grid::before,
+  .features-grid::after {
+    display: none;
+  }
+  
+  .feature-card {
+    padding: 20px 16px;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  
+  .feature-title {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  
+  .feature-desc {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  
+  /* Header Mobile */
+  .header {
+    padding: 16px 24px;
+  }
+  
+  .back-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+  
+  .header-title {
+    font-size: 20px;
+  }
+  
+  /* Recognition Area Mobile */
   .recognition-area {
-    margin: 40px 24px;
-    height: 400px;
+    margin: 32px 16px;
+    height: 380px;
+    border-radius: var(--border-radius-md);
   }
   
   .capture-btn {
-    margin: 0 24px 48px;
+    margin: 0 16px 48px;
     max-width: 100%;
+    padding: 18px 24px;
+    font-size: 16px;
+  }
+  
+  /* Hero Video Mobile */
+  .hero-video-wrapper {
+    width: 70%;
+    right: -20%;
+    opacity: 0.15;
+  }
+}
+
+/* Extra Small Mobile (iPhone SE, small Android) */
+@media (max-width: 375px) {
+  .hero-section {
+    padding: 45px 16px 50px;
+  }
+  
+  .hero-title {
+    font-size: 30px;
+  }
+  
+  .hero-subtitle {
+    font-size: 14px;
+  }
+  
+  .welcome-text {
+    font-size: 12px;
+  }
+  
+  .features-section {
+    padding: 20px 12px 48px;
+    margin-top: 0;
+  }
+  
+  .features-grid {
+    gap: 10px;
+  }
+  
+  .feature-card {
+    padding: 16px 12px;
+  }
+  
+  .feature-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .feature-title {
+    font-size: 14px;
+  }
+  
+  .feature-desc {
+    font-size: 11px;
+  }
+  
+  .header {
+    padding: 12px 16px;
+  }
+  
+  .header-title {
+    font-size: 18px;
+  }
+  
+  .recognition-area {
+    margin: 24px 12px;
+    height: 320px;
+  }
+  
+  .capture-btn {
+    margin: 0 12px 40px;
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+  
+  .search-bar {
+    padding: 12px 16px;
+  }
+  
+  .search-bar input {
+    font-size: 13px;
   }
 }

@@ -38,11 +38,11 @@ const HomeScreen: React.FC = () => {
             with NutriLeaf
           </h1>
           <p className="hero-subtitle">
-            Your AI-powered companion for smart malunggay cultivation and health monitoring
+            Your AI-powered companion for smart malunggay cultivation
           </p>
           <div className="search-bar">
             <span>🔍</span>
-            <input type="text" placeholder="Search malunggay products..." />
+            <input type="text" placeholder="Search products..." />
           </div>
         </div>
       </div>
